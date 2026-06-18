@@ -1,0 +1,12 @@
+{
+  "name": "digisheet",
+  "version": "1.0.0",
+  "description": "DigiSheet — MERN stack digital log manager (web port of Star Scan)",
+  "private": true,
+  "scripts": {
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm run dev",
+    "install:all": "cd backend && npm install && cd ../frontend && npm install"
+  },
+  "workspaces": []
+}

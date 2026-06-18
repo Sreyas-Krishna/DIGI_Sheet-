@@ -1,0 +1,32 @@
+{
+  "name": "digisheet-backend",
+  "version": "1.0.0",
+  "description": "DigiSheet backend — Node/Express/MongoDB REST API with OCR processing",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "digisheet",
+    "ocr",
+    "express",
+    "mongodb"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "csv-stringify": "^6.5.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.1",
+    "multer": "^2.2.0",
+    "node-fetch": "^2.7.0",
+    "tesseract.js": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base ───────────────────────────────────────────────────────────────────── */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ds-bg text-ds-cream font-sans antialiased;
+    min-height: 100dvh;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-ds-bg;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-ds-border rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-ds-muted;
+  }
+}
+
+/* ── Components ─────────────────────────────────────────────────────────────── */
+@layer components {
+  /* Glass card with subtle border and shadow */
+  .ds-card {
+    @apply bg-ds-surface border border-ds-border rounded-2xl shadow-ds-card;
+  }
+
+  /* Neumorphic-style inset surface */
+  .ds-inset {
+    @apply bg-ds-bg border border-ds-border rounded-xl shadow-ds-inset;
+  }
+
+  /* Primary action button */
+  .ds-btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5
+           bg-ds-gold text-ds-bg font-bold rounded-xl text-sm
+           hover:brightness-110 active:scale-95
+           transition-all duration-150 disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+
+  /* Ghost button */
+  .ds-btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2
+           text-ds-muted font-semibold rounded-xl text-sm border border-ds-border
+           hover:text-ds-cream hover:border-ds-muted
+           transition-all duration-150;
+  }
+
+  /* Danger button */
+  .ds-btn-danger {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2
+           text-ds-red font-semibold rounded-xl text-sm border border-ds-border
+           hover:bg-ds-red/10 hover:border-ds-red/40
+           transition-all duration-150;
+  }
+
+  /* Text input */
+  .ds-input {
+    @apply w-full bg-ds-bg border border-ds-border rounded-xl px-4 py-2.5
+           text-ds-cream placeholder-ds-muted text-sm font-medium
+           focus:outline-none focus:border-ds-gold/60 focus:ring-1 focus:ring-ds-gold/20
+           transition-all duration-150;
+  }
+
+  /* Badge */
+  .ds-badge {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-xs font-bold;
+  }
+}
+
+/* ── Utilities ──────────────────────────────────────────────────────────────── */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
